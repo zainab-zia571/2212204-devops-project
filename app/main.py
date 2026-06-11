@@ -2,14 +2,17 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from pydantic import BaseModel
-from app.database import get_db, engine
+from app.database import get_db, engine, Base
 from app import models
-
-models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Student Records API")
 
 YOUR_REG_NO = "2212204"
+
+
+@app.on_event("startup")
+def startup():
+    Base.metadata.create_all(bind=engine)
 
 
 class StudentCreate(BaseModel):
