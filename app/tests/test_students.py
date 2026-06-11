@@ -44,3 +44,4 @@ def test_get_student_by_reg_no(client):
 def test_get_student_not_found(client):
     response = client.get("/students/NOTEXIST")
     assert response.status_code == 404
+    

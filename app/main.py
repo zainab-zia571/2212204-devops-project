@@ -9,7 +9,7 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Student Records API")
 
-YOUR_REG_NO = "2212204"  
+YOUR_REG_NO = "2212204"
 
 
 class StudentCreate(BaseModel):

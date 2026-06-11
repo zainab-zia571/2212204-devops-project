@@ -10,3 +10,4 @@ class Student(Base):
     name = Column(String, nullable=False)
     email = Column(String, nullable=False)
     course = Column(String, nullable=False)
+    
