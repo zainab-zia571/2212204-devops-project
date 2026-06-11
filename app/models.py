@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+﻿from sqlalchemy import Column, Integer, String
 from app.database import Base
 
 
@@ -10,4 +10,3 @@ class Student(Base):
     name = Column(String, nullable=False)
     email = Column(String, nullable=False)
     course = Column(String, nullable=False)
-    
